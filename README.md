@@ -1,5 +1,26 @@
-# Vue 3 + Vite
+# Просмотр фотоальбомов
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Этот небольшой проект был создан для  знакомства с Vue3 и Tailwind CSS. Проект использует JSONPlaceholder API в качестве бэкенда. Для поддержки качества кода используется Eslint + Vue ESLint plugin
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Функциональность:
+ 
+ - Просмотр списка альбомов с фотографиями
+ - Сортировка альбомов по названию, идентификатору, идентификатору альбома
+ - Всплывающие уведомления при неправильном вводе данных для поиска, а также ошибках загрузки данных
+ - Адаптивный интерфейс для различных устройств
+
+## Установка и запуск
+
+
+```bash
+
+npm install
+npm run dev
+```
+
+## Учебные цели
+
+Проект разработан для знакомства с :
+
+- Vue 3 Composition API
+- Стилизацией с помощью Tailwind CSS
