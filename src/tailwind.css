@@ -1,0 +1,72 @@
+/* src/index.css */
+@import "tailwindcss";
+/*@import "assets/fonts/gogol_regular.otf";*/
+@tailwindcss base;
+@tailwindcss components;
+@tailwindcss utilities;
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@font-face {
+  font-family: Gogol-regular;
+  src: url("./assets/fonts/gogol_regular.otf") format('opentype');
+}
+
+:root{
+  --font-gogol:'Gogol-regular', sans-serif;
+  overflow: hidden;
+  --danger:#e7000b;
+  --info: #155dfc;
+}
+
+.font-myfont {
+  font-family: var(--font-gogol);
+}
+
+@theme {
+  --color-text: oklch(25% 0.01 260);           
+  --color-text-secondary: oklch(45% 0.01 260); 
+  --color-button-text:oklch(1 0 0);
+  --color-background: oklch(0.9605 0.0046 258.32);
+  --color-panel: oklch(0.9851 0 0);
+  --color-border: oklch(0.931 0 0);
+  --color-accent: var(--color-blue-700);
+  --color-info: var(--color-blue-700);
+  --color-danger: var(--color-red-700);
+  --color-accent-hover: var(--color-blue-800);
+}
+
+@layer theme {
+  .dark{
+    --color-text: oklch(95% 0.01 260);          
+    --color-text-secondary: oklch(75% 0.01 260); 
+    --color-button-text:oklch(1 0 0);
+    --color-background:oklch(0.1822 0 0);
+    --color-panel: oklch(0.252 0 0);
+    --color-border: oklch(0.2694 0.0118 0);
+    --color-accent: var(--color-blue-600);
+    --color-info: var(--color-blue-600);
+    --color-danger: var(--color-red-600);
+    --color-accent-hover: var(--color-blue-700);
+  }
+}
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: var(--color-panel);
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--color-accent);
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-hover);
+  }
+}
